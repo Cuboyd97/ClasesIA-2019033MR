@@ -7,7 +7,7 @@ using UnityEngine;
 */
 
 //Los estados en que puede estar el agente
-public enum AgentState {Idle, OnMovement, Attacking, Dead}
+public enum AgentState { Idle, OnMovement, Attacking, Dead }
 
 public class AgenteEstatico : MonoBehaviour
 {
@@ -34,6 +34,8 @@ public class AgenteEstatico : MonoBehaviour
 
     public GameObject prefabBala;
     public Transform canion;
+
+
     //Declaración de los estados que tendrá el agente para su ejecución
     public readonly IdleStaticState idleState = new IdleStaticState();
     public readonly RotateStaticAgent rotateState = new RotateStaticAgent();
@@ -44,7 +46,7 @@ public class AgenteEstatico : MonoBehaviour
     {
         targetObj = GameObject.FindGameObjectWithTag("Player");
 
-        TransitionToState(idleState); //Su primer estado es el Idle
+        TransitionToState(idleState);
     }
 
     // Este metodo se manda llamar cada frame durante la ejecución del proyecto
@@ -65,13 +67,13 @@ public class AgenteEstatico : MonoBehaviour
     public virtual void TargetDetected()
     {
         Collider[] colliders = Physics.OverlapSphere(sensorPosition.position, radiusDetection, targetMask); //El colisionador guarda en un arreglo los objetos que este detectando y que tengan el layer
-        if(colliders.Length == 0) //Si no hay objetos en los colisionadore
+        if (colliders.Length == 0) //Si no hay objetos en los colisionadore
         {
-            targetDetected = false; //No hay target
+            targetDetected = false;
         }
-        else //Si no
+        else
         {
-            targetDetected = true; //El target ha sido detectado
+            targetDetected = true;
         }
     }
 
@@ -82,11 +84,11 @@ public class AgenteEstatico : MonoBehaviour
         curState.EnterState(this);
     }
 
-
     public void FireBullet()
     {
         Instantiate(prefabBala, canion.position, canion.rotation);
     }
+
     //Metodo para ejecutar corutinas y nos permitan ejecutar ciertos procesos en un cantidad de tiempo determinada,
     //en este caso la espera para depues de rotar
     public void Coroutine(IEnumerator thisCoroutine)

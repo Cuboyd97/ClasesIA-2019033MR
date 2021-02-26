@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 100465532}
   - component: {fileID: 100465531}
   m_Layer: 0
-  m_Name: Torreta
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,12 +151,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100465529}
   m_LocalRotation: {x: -0.70603263, y: -0, z: -0, w: 0.7081793}
-  m_LocalPosition: {x: 0.136, y: 0.132, z: -0.494}
-  m_LocalScale: {x: 0.29143745, y: 0.8344524, z: 0.2473934}
+  m_LocalPosition: {x: 0.136, y: 0.13199997, z: -0.494}
+  m_LocalScale: {x: 0.29143745, y: 0.8344526, z: 0.24739346}
   m_Children:
   - {fileID: 2128759196}
   m_Father: {fileID: 639633814}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &100465531
 MeshCollider:
@@ -1009,7 +1009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272617563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38, y: 0.72, z: 2.72}
+  m_LocalPosition: {x: -0.38, y: 0.72, z: 2.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1108,8 +1108,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 100465530}
   - {fileID: 1471634629}
+  - {fileID: 100465530}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   - {x: 0, y: 360, z: 0}
   angleIndex: 0
   prefabBala: {fileID: 16515959464255811, guid: ea369671b740eb04c8e6f9829f667b3e, type: 3}
-  canion: {fileID: 0}
+  canion: {fileID: 2128759196}
 --- !u!1 &959006917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,12 +1262,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471634628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 639633814}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659431749
 GameObject:
@@ -1618,7 +1618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128759196}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: canion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

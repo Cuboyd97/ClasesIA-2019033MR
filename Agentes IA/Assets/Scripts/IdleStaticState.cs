@@ -22,9 +22,9 @@ public class IdleStaticState : FunctionsFSM
     public override void UpdateState(AgenteEstatico agent)
     {
         //necesario preguntar si se ha detectado al jugador
-            //agent.StopAllCoroutines();//Esto detiene la corutina de Wait que esta en este código
-            //Si es verdad, cambiar al estado de atacar
-            if(agent.targetDetected)
+        //agent.StopAllCoroutines();//Esto detiene la corutina de Wait que esta en este código
+        //Si es verdad, cambiar al estado de atacar
+        if (agent.targetDetected)
         {
             agent.StopAllCoroutines();
             agent.TransitionToState(agent.attackState);
