@@ -1009,7 +1009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272617563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.61, z: 4.63}
+  m_LocalPosition: {x: -0.38, y: 0.72, z: 2.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1104,15 +1104,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639633810}
-  m_LocalRotation: {x: -0, y: 0.9999819, z: -0, w: -0.0060212277}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 100465530}
   - {fileID: 1471634629}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180.69, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &639633815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,6 +1132,7 @@ MonoBehaviour:
   radiusDetection: 3
   sensorPosition: {fileID: 1471634629}
   targetDetected: 0
+  targetObj: {fileID: 0}
   speedRotation: 5
   timeIdle: 2
   angles:
@@ -1141,6 +1142,7 @@ MonoBehaviour:
   - {x: 0, y: 360, z: 0}
   angleIndex: 0
   prefabBala: {fileID: 16515959464255811, guid: ea369671b740eb04c8e6f9829f667b3e, type: 3}
+  canion: {fileID: 0}
 --- !u!1 &959006917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1367,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15216
+  m_Name: pb_Mesh15220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1600,7 +1602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900681574}
   m_LocalRotation: {x: 0.25832707, y: -0, z: -0, w: 0.96605754}
-  m_LocalPosition: {x: 0, y: 3.78, z: -2.65}
+  m_LocalPosition: {x: 0, y: 9.06, z: -11.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

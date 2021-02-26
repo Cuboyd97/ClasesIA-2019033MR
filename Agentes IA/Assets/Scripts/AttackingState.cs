@@ -4,17 +4,38 @@ using UnityEngine;
 
 public class AttackingState : FunctionsFSM
 {
+    float nextFire;
+    float rateFire = 0.5f;
+
     public override void EnterState(AgenteEstatico agent)
     {
         //Código para cuando entra al estado de atacar
-        Debug.Lag("Estado de atacar")
+        Debug.Log("Estado de atacar");
         agent.agentStatus = AgentState.Attacking;
 
-        agent.Firebullet();
+        //agent.FireBullet();
+        nextFire = Time.time + rateFire;
+
     }
 
     public override void UpdateState(AgenteEstatico agent)
     {
-        //Código para cuando no se detecta al jugador
+        if (agent.targetDetected)
+        {
+            var lookRotation = Quaternion.LookRotation(agent.targetObj.transform.position - agent.transform.position);
+
+            agent.transform.rotation = Quaternion.Slerp(agent.transform.rotation, lookRotation, agent.speedRotation * Time.deltaTime);
+
+            if (nextFire < Time.time)
+            {
+                agent.FireBullet();
+                nextFire = Time.time + rateFire;
+            }
+          
+        }
+        else
+        {
+            agent.TransitionToState(agent.idleState);
+        }
     }
 }

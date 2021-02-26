@@ -27,7 +27,7 @@ public class IdleStaticState : FunctionsFSM
             if(agent.targetDetected)
         {
             agent.StopAllCoroutines();
-            agent.Transition
+            agent.TransitionToState(agent.attackState);
         }
     }
 }
